@@ -6,3 +6,14 @@ export const capitalize = (string) => {
 export const reverse = (string) => {
   return string.split('').reverse().join('');
 };
+
+export const calculator = {
+  add: (a, b) => a + b,
+  sub: (a, b) => a - b,
+  div: (a, b) => {
+    if (b === 0) return false;
+    if (a === 0) return 0;
+    return a / b;
+  },
+  mul: (a, b) => a * b,
+};
