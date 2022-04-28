@@ -61,3 +61,12 @@ export const caesarCipher = (str) => {
 
   return cipher;
 };
+
+export const analyzeArray = (array) => {
+  return {
+    average: array.reduce((acc, cur) => acc + cur, 0) / array.length,
+    min: Math.min(...new Set(array)),
+    max: Math.max(...new Set(array)),
+    length: array.length,
+  };
+};
