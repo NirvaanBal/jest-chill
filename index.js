@@ -17,3 +17,47 @@ export const calculator = {
   },
   mul: (a, b) => a * b,
 };
+
+const alphabet = (() => {
+  const alphabetL = 'abcdefghijklmnopqrstuvwxyz';
+  const alphabetU = alphabetL.toUpperCase();
+
+  return {
+    alphabetL,
+    alphabetU,
+  };
+})();
+
+const findLetter = (letter, aL, aU) => {
+  const indexL = aL.indexOf(letter);
+  const indexU = aU.indexOf(letter);
+  if (indexL !== -1) return { indexL: indexL + 1 };
+  else if (indexU !== -1) return { indexU: indexU + 1 };
+  return -1;
+};
+
+export const caesarCipher = (str) => {
+  const alphabetL = alphabet.alphabetL;
+  const alphabetU = alphabet.alphabetU;
+
+  let cipher = '',
+    index = -1;
+  for (let i = 0; i < str.length; i++) {
+    index = findLetter(str[i], alphabetL, alphabetU);
+
+    if (index === -1) {
+      cipher += str[i];
+      continue;
+    }
+
+    if (index.indexL) {
+      if (index.indexL === 26) cipher += 'a';
+      else cipher += alphabetL[index.indexL];
+    } else if (index.indexU) {
+      if (index.indexU === 26) cipher += 'A';
+      else cipher += alphabetU[index.indexU];
+    }
+  }
+
+  return cipher;
+};

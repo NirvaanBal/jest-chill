@@ -1,4 +1,4 @@
-import { capitalize, reverse, calculator } from './index';
+import { capitalize, reverse, calculator, caesarCipher } from './index';
 
 test('capitalize string', () => {
   expect(capitalize('nirvaan')).toBe('Nirvaan');
@@ -20,4 +20,10 @@ test('calculator object', () => {
   expect(calculator.div(0, 1)).toEqual(0);
   expect(calculator.div(10, 3)).toBeCloseTo(3.33);
   expect(calculator.mul(1, 1)).toEqual(1);
+});
+
+test('cipher text', () => {
+  expect(caesarCipher('nirvaan')).toBe('ojswbbo');
+  expect(caesarCipher('zEbRa cRoSSinG')).toBe('aFcSb dSpTTjoH');
+  expect(caesarCipher('Alas!')).toBe('Bmbt!');
 });
