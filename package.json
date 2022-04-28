@@ -1,0 +1,23 @@
+{
+  "name": "jest-101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NirvaanBal/jest-101.git"
+  },
+  "author": "Nirvaan Bal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NirvaanBal/jest-101/issues"
+  },
+  "homepage": "https://github.com/NirvaanBal/jest-101#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^28.0.2"
+  }
+}
