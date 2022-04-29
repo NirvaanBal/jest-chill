@@ -1,4 +1,4 @@
-# Jest-101
+# Jest Chill
 
 A miniscule project to solidify knowledge of Test Driven Development.
 
