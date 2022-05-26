@@ -16,6 +16,10 @@ A miniscule project to solidify knowledge of Test Driven Development.
 - Jest
 - Babel
 
+## Aim
+
+The sole aim behind this project was to get hands dirty with Jest.
+
 ## Bibliography
 
 - Project Idea - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice)
